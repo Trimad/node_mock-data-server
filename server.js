@@ -1,15 +1,15 @@
-var fs = require('fs');
-var mock = fs.readFileSync('mock.json');
-var mockData = JSON.parse(mock);
+let fs = require('fs');
+let mock = fs.readFileSync('mock.json');
+let mockData = JSON.parse(mock);
+let express = require('express');
+let app = express();
+let cors = require('cors');
+app.use(cors());
 
-var express = require('express');
-
-var app = express();
-
-var server = app.listen(3000, listening);
+let server = app.listen(3000, listening);
 
 function listening() {
-  console.log("Listening...");
+  console.log("Listening on localhost:3000");
 }
 
 app.use(express.static('website'));
@@ -41,7 +41,7 @@ function addThis(request, response) {
 
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-app.get('/all', sendAll);
+app.get('/all', cors(), sendAll);
 function sendAll(request, response) {
   let data = {
     mock: mockData
