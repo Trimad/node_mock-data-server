@@ -4,7 +4,7 @@ let mockData = JSON.parse(mock);
 let express = require('express');
 let app = express();
 let cors = require('cors');
-app.use(cors());
+//app.use(cors());
 
 let server = app.listen(3000, listening);
 
@@ -43,10 +43,7 @@ function addThis(request, response) {
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 app.get('/all', cors(), sendAll);
 function sendAll(request, response) {
-  let data = {
-    mock: mockData
-  }
-  response.send(data);
+  response.send(mockData);
 }
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
