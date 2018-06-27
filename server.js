@@ -6,12 +6,18 @@ let app = express();
 let cors = require('cors');
 //app.use(cors());
 
-let server = app.listen(3000, listening);
+let port = 80;
+//var http = require('http');
+//http.createServer(app).listen(port);
 
+//let server = app.listen(port, listening);
+//This configuration of the variable "server" allows connections from outside localhost.
+let server = app.listen(port, "0.0.0.0");
+/*
 function listening() {
-  console.log("Listening on localhost:3000");
+  console.log("Listening on port " + port);
 }
-
+*/
 app.use(express.static('website'));
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 app.get('/add/:title/:status/:notes', addThis);
@@ -36,7 +42,7 @@ function addThis(request, response) {
 
   function finished(err) {
     response.send(toBeWritten);
-    console.log('Successfully written.');
+    console.log('Successfully added:\n'+JSON.stringify(mockData[id],null,2));
   }
 
 }

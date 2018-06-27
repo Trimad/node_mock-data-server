@@ -34,9 +34,6 @@ function submitData() {
 
   function finished(data) {
     console.log(data);
-    createP(JSON.stringify(data, null, 2));
-
   }
-
 
 }
