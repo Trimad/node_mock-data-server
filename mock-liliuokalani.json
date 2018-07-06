@@ -1,0 +1,27 @@
+{
+    "series": [
+        {
+            "id": 0,
+            "series_no": "461",
+            "series_title": "Correspondence of the Superintendent/Engineer",
+            "from_date": "1929",
+            "to_date": "1966",
+            "scope_content": "The records consist mostly of loose pages that are in good condition. Some documents are photocopies or carbon copies. There are a few photographs in the records and oversize material such as maps and plans, which have been separated and flattened.",
+            "arrangement": "Arranged alphabetically by subject and chronologically thereunder. Separated materials are arranged similarly.",
+            "extent_description": "The records consist mostly of loose pages that are in good condition. Some documents are photocopies or carbon copies. There are a few photographs in the records and oversize material such as maps and plans, which have been separated and flattened.",
+            "extent_size": "3.13 cubic feet of paper records.",
+            "admin_history": null,
+            "access": null,
+            "language": null,
+            "notes": null,
+            "_links": {
+                "self": {
+                    "href": "http://localhost:8080/series/10"
+                },
+                "series": {
+                    "href": "http://localhost:8080/series/10"
+                }
+            }
+        }
+    ]
+}
